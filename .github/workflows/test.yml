@@ -10,16 +10,16 @@ jobs:
     defaults:
       run:
         working-directory: circuits
-    
+
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Install Nargo
-      uses: noir-lang/noirup@v0.1.2
-      with:
-        toolchain: 0.7.1
+      - name: Install Nargo
+        uses: noir-lang/noirup@v0.1.2
+        with:
+          toolchain: 0.10.3
 
-    - name: Run tests
-      run: |
-        nargo test
+      - name: Run tests
+        run: |
+          nargo test
